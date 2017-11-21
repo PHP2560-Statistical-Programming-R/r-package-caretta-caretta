@@ -1,4 +1,4 @@
-<h1 align="center">R Package: NBA Player Stats</h1> :basketball:
+<h1 align="center">R Package: NBA Player Stats :basketball:</h1>
 
 <h3 align="center"><i>Ozan Adiguzel</i></h3>
 
