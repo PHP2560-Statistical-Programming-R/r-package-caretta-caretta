@@ -1,46 +1,68 @@
-<h1 align="center">R Package: NBA Player Stats :basketball:</h1>
+<h1 align="center">R Package: nbaStats</h1>
 
-<h3 align="center"><i>Ozan Adiguzel</i></h3>
+<h3 align="center">Author: Ozan Adiguzel</h3>
 
-## Background :microscope:
+<h4 align="center"><i>A package to facilitate data scraping in basketball analytics field</i></h4>
 
-I have been scraping data for my projects from the following websites:
+## Introduction
 
-:arrow_right: [Basketball Reference](https://www.basketball-reference.com/)  
-:arrow_right: [Sports Reference](https://www.sports-reference.com/)  
-:arrow_right: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)  
+There is a huge amount of data on player stats. Basketball reference and Wikipedia are doing a good job by storing this information and making it publicly available. However, it is still difficult to extract specifics using these mediums.
 
-This is a package to extend and store the functions I have been working on. 
+This package facilitates access to player stats and is useful for all professional including players and coaches, but also basketball fans in general. 
 
-## Goal :dart:
+## Source Websites 
 
-The goal of this package is:
+:information_source: [Basketball Reference](https://www.basketball-reference.com/)  
+:information_source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)  
 
-:pushpin: to get total career stats for a given player  
-:pushpin: to get career stats per game for a given player  
-:pushpin: to get tatal stats for a given player for a given season  
-:pushpin: to get stats per game for a given player for a given season  
-:pushpin: to graph total career stats for a given player over time    
-:pushpin: to graph career stats per game for a given player over time   
-:pushpin: to compare multiple player performances with table and graphs   
-:pushpin: ...
+## Functions 
 
-## Main Components :wrench:
+:basketball: **season_ranking**: Scrape regular season rankings   
+```
+# get end of regular season team ranking for 2016-2017 season
+season_ranking(2016)
+```
+:basketball: **season_totals**: Scrape regular season stats totals for all players  
+```
+# get all player stats totals for 2016-2017 season
+season_totals(2016)
+```
+:basketball: **season_pergame**: Scrape regular season stats per game for all players 
+```
+# get all player stats per game for 2016-2017 season
+season_pergame(2016)
+```
+:basketball: **season_players**: Get list of players by season  
+```
+# get a list of players for 2016-2017 season
+season_players(2016)
+```
+:basketball: **player_totals**: Scrape regular season stats totals for given player  
+```
+# get Stephen Curry's stats totals for 2016-2017 season
+player_totals("Stephen Curry", 2016)
 
-This package will include the following main components:
+# you can get the player names using above-mentioned season_players function
+```
+:basketball: **player_pergame**: Scrape regular season stats per game for given player  
+```
+# get Stephen Curry's stats per game for 2016-2017 season
+player_pergame("Stephen Curry", 2016)
 
-:white_check_mark: Web scraping: rvest  
-:white_check_mark: Text Mining: stringr  
-:white_check_mark: Data Cleaning: dplyr  
-:white_check_mark: Visualization: ggplot2  
+# you can get the player names using above-mentioned season_players function
+```
+:basketball: **player_piclink**: Get the link of given player's picture  
+```
+# get the link to Stephen Curry's image
+player_piclink("Stephen Curry")
 
-## Challenge :punch:
+# you can get the player names using above-mentioned season_players function
+# player's image can be rendered or saved using this link
+```
 
-Efficiency is always a big challenge in web scraping projects. In this specific case, the above-mentioned websites store a myriad of player stats using abbreviations. To make this package more user-friendly, all components must be particularly neat and clear, a process which would be catalyzed by creating separate and detailed functions for distinct stats. 
+## Further Development
 
-Please take a look at the [Kevin Durant's Basketball Reference page](https://www.basketball-reference.com/players/d/duranke01.html) to have an idea.
+This project leaves much room for improvement. There are plenty of player stats available online, which would allow this package to grow exponentially.
 
-## Further Development :rocket:
+As this is my first R package, I would appreciate any feedback that would improve it and my future work. 
 
-This project leaves much room for improvement. There are plenty of player stats available online, which would allow this package to grow exponentially.  
- 

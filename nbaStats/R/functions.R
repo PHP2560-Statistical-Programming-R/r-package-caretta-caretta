@@ -1,6 +1,6 @@
 
 # please note that the package has: 0 errors | 0 warnings | 0 notes in R CMD check results
-# this is a great step to get the package accepted to CRAN
+# this is a great step to get it accepted to CRAN
 
 # creating global variables to avoid "notes" from R CMD check results
 if(getRversion() >= "2.15.1") {
